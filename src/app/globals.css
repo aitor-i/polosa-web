@@ -38,6 +38,27 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  /* Primary Colors */
+  --apple-blue: #007aff;
+  --apple-green: #34c759;
+  --apple-indigo: #5856d6;
+  --apple-orange: #ff9500;
+  --apple-pink: #ff2d55;
+  --apple-purple: #af52de;
+  --apple-red: #ff3b30;
+  --apple-teal: #5ac8fa;
+  --apple-yellow: #ffcc00;
+
+  /* Secondary Colors */
+  --apple-gray: #8e8e93;
+  --apple-light-gray: #c7c7cc;
+  --apple-lighter-gray: #e5e5ea;
+  --apple-lightest-gray: #f2f2f7;
+
+  /* Additional Colors */
+  --apple-black: #000000;
+  --apple-white: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -70,6 +91,27 @@
     --callout-border-rgb: 108, 108, 108;
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
+
+    /* Primary Colors */
+    --apple-blue: #0a84ff;
+    --apple-green: #30d158;
+    --apple-indigo: #5e5ce6;
+    --apple-orange: #ff9f0a;
+    --apple-pink: #ff375f;
+    --apple-purple: #bf5af2;
+    --apple-red: #ff453a;
+    --apple-teal: #64d2ff;
+    --apple-yellow: #ffd60a;
+
+    /* Secondary Colors */
+    --apple-gray: #8e8e93;
+    --apple-light-gray: #636366;
+    --apple-lighter-gray: #48484a;
+    --apple-lightest-gray: #1c1c1e;
+
+    /* Additional Colors */
+    --apple-black: #000000;
+    --apple-white: #ffffff;
   }
 }
 
@@ -119,6 +161,13 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+  background: linear-gradient(
+    to bottom right,
+    var(--apple-blue),
+    var(--apple-green)
+  );
+  min-height: 100vh;
 }
 
 a {
@@ -129,5 +178,12 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+  body {
+    background: linear-gradient(
+      to bottom right,
+      var(--apple-lightest-gray),
+      var(--apple-lighter-gray)
+    );
   }
 }
