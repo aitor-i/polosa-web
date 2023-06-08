@@ -1,3 +1,4 @@
+import styles from "./PercentageCircle.module.css";
 interface Props {
   percentage: number;
   size?: "SMALL" | "MEDIUM" | "BIG";
@@ -8,11 +9,13 @@ export function PercentageCircle({ percentage, size = "MEDIUM" }: Props) {
   let svgSize = "200";
   let thickness = "15";
   let coord = "100";
+  let strokeWidth = "15";
 
   switch (size) {
     case "SMALL":
       radius = 50;
       svgSize = "175";
+      strokeWidth = "10";
       coord = "90";
 
       break;
@@ -37,19 +40,30 @@ export function PercentageCircle({ percentage, size = "MEDIUM" }: Props) {
         cx={coord}
         cy={coord}
         fill="transparent"
-        stroke="#e5e5e5" // color of the circle outline
-        strokeWidth="15" // thickness of the circle outline
+        stroke="#c7c7cc" // color of the circle outline
+        strokeWidth={strokeWidth} // thickness of the circle outline
       />
       <circle
+        className={styles.progressCircle}
         r={radius}
         cx={coord}
         cy={coord}
         fill="transparent"
-        stroke="#ff5722" // color of the completion
-        strokeWidth="15" // thickness of the completion
+        stroke=" #ff9500" // color of the completion
+        strokeWidth={strokeWidth} // thickness of the completion
         strokeDasharray={circumference}
         strokeDashoffset={offset}
       />
+      <foreignObject
+        x={coord}
+        y={coord}
+        width="100"
+        height="100"
+        dominantBaseline="central"
+        textAnchor="middle"
+      >
+        <p>Aitor</p>
+      </foreignObject>
     </svg>
   );
 }
