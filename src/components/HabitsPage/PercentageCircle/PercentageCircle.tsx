@@ -1,4 +1,7 @@
+import { FaBeer } from "react-icons/fa";
+
 import styles from "./PercentageCircle.module.css";
+
 interface Props {
   percentage: number;
   size?: "SMALL" | "MEDIUM" | "BIG";
@@ -10,6 +13,7 @@ export function PercentageCircle({ percentage, size = "MEDIUM" }: Props) {
   let thickness = "15";
   let coord = "100";
   let strokeWidth = "15";
+  let fontSize = "24px";
 
   switch (size) {
     case "SMALL":
@@ -17,6 +21,7 @@ export function PercentageCircle({ percentage, size = "MEDIUM" }: Props) {
       svgSize = "175";
       strokeWidth = "10";
       coord = "90";
+      fontSize = "15px";
 
       break;
 
@@ -24,6 +29,7 @@ export function PercentageCircle({ percentage, size = "MEDIUM" }: Props) {
       radius = 150;
       svgSize = "500";
       coord = "250";
+      fontSize = "32";
       break;
 
     default:
@@ -55,14 +61,21 @@ export function PercentageCircle({ percentage, size = "MEDIUM" }: Props) {
         strokeDashoffset={offset}
       />
       <foreignObject
-        x={coord}
-        y={coord}
-        width="100"
-        height="100"
+        x={0}
+        y={0}
+        width={svgSize}
+        height={svgSize}
         dominantBaseline="central"
         textAnchor="middle"
+        style={{
+          fontSize: fontSize,
+        }}
+        className={styles.innerObject}
       >
-        <p>Aitor</p>
+        <div className={styles.container}>
+          <FaBeer className={styles.icon} />
+          <p>5/10</p>
+        </div>
       </foreignObject>
     </svg>
   );
