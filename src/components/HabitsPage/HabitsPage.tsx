@@ -10,7 +10,7 @@ export const HabitsPage = () => {
         <h1>Habits</h1>
       </hgroup>
       <PercentageCircle size="SMALL" percentage={15} />
-      <PercentageCircle percentage={36} />
+      <PercentageCircle percentage={36} shape="SLIM" />
       <PercentageCircle size="BIG" percentage={76} />
     </main>
   );

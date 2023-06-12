@@ -5,15 +5,22 @@ import styles from "./PercentageCircle.module.css";
 interface Props {
   percentage: number;
   size?: "SMALL" | "MEDIUM" | "BIG";
+  shape?: "REGULAR" | "SLIM";
 }
 
-export function PercentageCircle({ percentage, size = "MEDIUM" }: Props) {
+export function PercentageCircle({
+  percentage,
+  size = "MEDIUM",
+  shape = "REGULAR",
+}: Props) {
   let radius = 75; // radius of the circle
   let svgSize = "200";
-  let thickness = "15";
   let coord = "100";
   let strokeWidth = "15";
   let fontSize = "24px";
+  let innerWith = "15";
+
+  if (shape === "SLIM") innerWith = "10";
 
   switch (size) {
     case "SMALL":
@@ -22,6 +29,7 @@ export function PercentageCircle({ percentage, size = "MEDIUM" }: Props) {
       strokeWidth = "10";
       coord = "90";
       fontSize = "15px";
+      innerWith = "10";
 
       break;
 
@@ -56,7 +64,7 @@ export function PercentageCircle({ percentage, size = "MEDIUM" }: Props) {
         cy={coord}
         fill="transparent"
         stroke=" #ff9500" // color of the completion
-        strokeWidth={strokeWidth} // thickness of the completion
+        strokeWidth={innerWith} // thickness of the completion
         strokeDasharray={circumference}
         strokeDashoffset={offset}
       />
