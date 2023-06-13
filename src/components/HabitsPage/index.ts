@@ -1,3 +1,3 @@
-import { HabitsPage } from "./HabitsPage";
+import { HabitsPage } from './HabitsPage';
 
 export default HabitsPage;

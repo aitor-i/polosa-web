@@ -1,5 +1,5 @@
-import Navigation from "components/Navigation";
-import styles from "./LoginPage.module.css";
+import Navigation from 'components/Navigation';
+import styles from './LoginPage.module.css';
 
 export const LoginPage = () => {
   return (

@@ -1,6 +1,6 @@
-import Navigation from "components/Navigation";
-import React from "react";
-import PercentageCircle from "./PercentageCircle";
+import Navigation from 'components/Navigation';
+import React from 'react';
+import PercentageCircle from './PercentageCircle';
 
 export const HabitsPage = () => {
   return (

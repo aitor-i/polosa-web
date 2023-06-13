@@ -1,4 +1,4 @@
-import RegistrationPage from "components/RegistrationPage";
+import RegistrationPage from 'components/RegistrationPage';
 
 export default function Registration() {
   return <RegistrationPage />;

@@ -1,6 +1,6 @@
-import Navigation from "components/Navigation";
+import Navigation from 'components/Navigation';
 
-import styles from "./RegistrationPage.module.css";
+import styles from './RegistrationPage.module.css';
 
 export const RegistrationPage = () => {
   return (

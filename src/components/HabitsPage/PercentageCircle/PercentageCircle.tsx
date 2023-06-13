@@ -1,43 +1,39 @@
-import { FaBeer } from "react-icons/fa";
+import { FaBeer } from 'react-icons/fa';
 
-import styles from "./PercentageCircle.module.css";
+import styles from './PercentageCircle.module.css';
 
 interface Props {
   percentage: number;
-  size?: "SMALL" | "MEDIUM" | "BIG";
-  shape?: "REGULAR" | "SLIM";
+  size?: 'SMALL' | 'MEDIUM' | 'BIG';
+  shape?: 'REGULAR' | 'SLIM';
 }
 
-export function PercentageCircle({
-  percentage,
-  size = "MEDIUM",
-  shape = "REGULAR",
-}: Props) {
+export function PercentageCircle({ percentage, size = 'MEDIUM', shape = 'REGULAR' }: Props) {
   let radius = 75; // radius of the circle
-  let svgSize = "200";
-  let coord = "100";
-  let strokeWidth = "15";
-  let fontSize = "24px";
-  let innerWith = "15";
+  let svgSize = '200';
+  let coord = '100';
+  let strokeWidth = '15';
+  let fontSize = '24px';
+  let innerWith = '15';
 
-  if (shape === "SLIM") innerWith = "10";
+  if (shape === 'SLIM') innerWith = '10';
 
   switch (size) {
-    case "SMALL":
+    case 'SMALL':
       radius = 50;
-      svgSize = "175";
-      strokeWidth = "10";
-      coord = "90";
-      fontSize = "15px";
-      innerWith = "10";
+      svgSize = '175';
+      strokeWidth = '10';
+      coord = '90';
+      fontSize = '15px';
+      innerWith = '10';
 
       break;
 
-    case "BIG":
+    case 'BIG':
       radius = 150;
-      svgSize = "500";
-      coord = "250";
-      fontSize = "32";
+      svgSize = '500';
+      coord = '250';
+      fontSize = '32';
       break;
 
     default:
@@ -76,7 +72,7 @@ export function PercentageCircle({
         dominantBaseline="central"
         textAnchor="middle"
         style={{
-          fontSize: fontSize,
+          fontSize: fontSize
         }}
         className={styles.innerObject}
       >

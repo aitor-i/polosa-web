@@ -1,3 +1,3 @@
-import { PercentageCircle } from "./PercentageCircle";
+import { PercentageCircle } from './PercentageCircle';
 
 export default PercentageCircle;
