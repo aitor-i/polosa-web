@@ -1,0 +1,49 @@
+{
+  "colors": [
+    {
+      "name": "apple-blue",
+      "code": "#007aff",
+      "alias": "Blue"
+    },
+    {
+      "name": "apple-green",
+      "code": "#34c759",
+      "alias": "Green"
+    },
+    {
+      "name": "apple-indigo",
+      "code": "#5856d6",
+      "alias": "Indigo"
+    },
+    {
+      "name": "apple-orange",
+      "code": "#ff9500",
+      "alias": "Orange"
+    },
+    {
+      "name": "apple-pink",
+      "code": "#ff2d55",
+      "alias": "Pink"
+    },
+    {
+      "name": "apple-purple",
+      "code": "#af52de",
+      "alias": "Purple"
+    },
+    {
+      "name": "apple-red",
+      "code": "#ff3b30",
+      "alias": "Red"
+    },
+    {
+      "name": "apple-teal",
+      "code": "#5ac8fa",
+      "alias": "Teal"
+    },
+    {
+      "name": "apple-yellow",
+      "code": "#ffcc00",
+      "alias": "Yellow"
+    }
+  ]
+}
