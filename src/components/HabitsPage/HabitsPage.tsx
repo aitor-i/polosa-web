@@ -1,6 +1,7 @@
 import Navigation from 'components/Navigation';
 import React from 'react';
 import PercentageCircle from './PercentageCircle';
+import NewHabit from './NewHabit';
 
 export const HabitsPage = () => {
   return (
@@ -10,8 +11,7 @@ export const HabitsPage = () => {
         <h1>Habits</h1>
       </hgroup>
       <PercentageCircle size="SMALL" percentage={15} />
-      <PercentageCircle percentage={36} shape="SLIM" />
-      <PercentageCircle size="BIG" percentage={76} />
+      <NewHabit />
     </main>
   );
 };
