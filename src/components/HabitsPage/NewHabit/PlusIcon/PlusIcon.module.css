@@ -1,0 +1,7 @@
+.plusIcon {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  color: var(--apple-theme-background);
+  z-index: 1001;
+}
