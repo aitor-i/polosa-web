@@ -1,0 +1,50 @@
+.container {
+  width: 100vw;
+  height: 5rem;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  border-radius: 5px;
+  /* bottom: -100%; */
+  position: absolute;
+  background-color: var(--apple-theme-background);
+}
+
+.fullSize {
+  height: 75vh;
+  animation: resizeAnimationUpp;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.addIcon {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  color: var(--apple-theme-background);
+  z-index: 1001;
+}
+
+.formContainer {
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
+@keyframes resizeAnimationUpp {
+  from {
+    height: 10vh;
+  }
+  to {
+    height: 75vh;
+  }
+}
+
+@keyframes resizeAnimationDown {
+  from {
+    height: 60vh;
+  }
+  to {
+    height: 10vh;
+  }
+}
