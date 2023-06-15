@@ -1,0 +1,10 @@
+.dropDown {
+  position: absolute;
+  background-color: var(--apple-light-gray);
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--apple-gray);
+  border-radius: 5px;
+}
+
+.option {
+}
