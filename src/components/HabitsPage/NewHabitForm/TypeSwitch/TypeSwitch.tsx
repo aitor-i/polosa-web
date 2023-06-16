@@ -5,21 +5,20 @@ export const TypeSwitch = () => {
   const [habitType, setHabitType] = useState<'GOAL' | 'COUNTER'>('GOAL');
   const goalClickHandler = (event: MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
-    setHabitType('GOAL');
+    setHabitType(prev => {
+      if (prev == 'GOAL') return 'COUNTER';
+      return 'GOAL';
+    });
   };
-  const counterClickHandler = (event: MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-    setHabitType('COUNTER');
-  };
+
   return (
     <>
       <section className={styles.typeButtonsContainer}>
-        <button onClick={goalClickHandler} className={`${styles.typeButton} ${habitType === 'GOAL' && styles.typeButtonSelected}`}>
-          {' '}
-          Goal{' '}
-        </button>
-        <button onClick={counterClickHandler} className={`${styles.typeButton} ${habitType === 'COUNTER' && styles.typeButtonSelected}`}>
-          Counter
+        <button
+          onClick={goalClickHandler}
+          className={`${styles.switch} ${habitType === 'GOAL' ? styles.typeGoalSelected : styles.typeCounterSelected}`}
+        >
+          {habitType === 'GOAL' ? 'Goal' : 'Counter'}
         </button>
       </section>
       <div className={styles.formSection}>
@@ -41,10 +40,7 @@ export const TypeSwitch = () => {
             </section>
           </div>
         ) : (
-          <div className={styles.formSection}>
-            <label>Counter</label>
-            <input type="text" name="habit-name" />
-          </div>
+          <div className={styles.formSection}></div>
         )}
       </div>
     </>

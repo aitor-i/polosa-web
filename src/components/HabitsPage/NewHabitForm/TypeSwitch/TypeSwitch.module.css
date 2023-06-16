@@ -3,3 +3,41 @@
   flex-direction: column;
   gap: 0.4rem;
 }
+.typeButtonsContainer {
+  width: 100%;
+  height: 3rem;
+  border: 1px solid var(--apple-light-gray);
+  border-radius: 5px;
+}
+.switch {
+  width: 50%;
+  height: 100%;
+  font-size: 1.2rem;
+}
+.typeGoalSelected {
+  transform: translateX(0);
+  animation: moveRight 0.5s ease-in;
+}
+
+.typeCounterSelected {
+  transform: translateX(100%);
+  animation: moveLeft 0.5s ease-in;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
