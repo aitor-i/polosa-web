@@ -24,6 +24,29 @@
   animation: moveLeft 0.5s ease-in;
 }
 
+.typeContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.goalTypeContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.goalContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.goalInput {
+  width: 100%;
+}
+
 @keyframes moveLeft {
   0% {
     transform: translateX(0);

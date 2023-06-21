@@ -26,16 +26,17 @@ export const TypeSwitch = () => {
           <div className={styles.formSection}>
             <h3>Goal</h3>
             <section className={styles.typeContainer}>
-              <div>
+              <div className={styles.goalTypeContainer}>
                 <label>Goal type</label>
                 <select name="" id="">
                   <option value="">Daily</option>
                   <option value="">Weakly</option>
+                  <option value="">Monthly</option>
                 </select>
               </div>
-              <div>
+              <div className={styles.goalContainer}>
                 <label>Goal</label>
-                <input type="number" />
+                <input className={styles.goalInput} type="number" />
               </div>
             </section>
           </div>
