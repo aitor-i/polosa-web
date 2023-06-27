@@ -13,12 +13,10 @@ export const NewHabitForm = () => {
 
       <div className={styles.selectorsContainer}>
         <section className={styles.selector}>
-          {/* <label>Habit color</label> */}
           <ColorSelector />
         </section>
 
         <section className={styles.selector}>
-          {/* <label>Habit Icon</label> */}
           <IconSelector />
         </section>
       </div>
